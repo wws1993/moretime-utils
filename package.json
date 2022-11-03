@@ -29,6 +29,7 @@
     "*.ts?(x)": []
   },
   "dependencies": {
+    "@moretime/utils": "^1.0.3",
     "react": "^18.0.0"
   },
   "devDependencies": {
