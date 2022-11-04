@@ -1,7 +1,2 @@
-import { dupRemove } from "./dupRemove";
-import { sortByKey } from "./sortByKey";
-
-export default {
-  dupRemove,
-  sortByKey,
-};
+export { dupRemove } from "./dupRemove";
+export { sortByKey } from "./sortByKey";

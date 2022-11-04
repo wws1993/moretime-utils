@@ -1,2 +1,3 @@
-export {default as Array} from './plugins/Array';
-export {default as Random} from './plugins/Random';
+export * as array from './plugins/Array';
+export * as random from './plugins/Random';
+export * as date from './plugins/Date';
