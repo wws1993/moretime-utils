@@ -4,9 +4,9 @@ hero:
   desc: 一个js工具箱，集成了常用js工具函数，包含但不限于数组、日期、随机数等。
   actions:
     - text: 快速使用
-      link: /components
-    - text: 文档
-      link: /Random/getHash
+      link: /use
+    - text: Apis
+      link: /docs
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     # title:
@@ -19,3 +19,5 @@ features:
     desc: 易用
 footer: Open-source MIT Licensed | Copyright © 2022 [moretime](https://www.baidu.com)
 ---
+
+Hi! Nice to meet you!

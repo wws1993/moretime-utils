@@ -1,6 +1,6 @@
 {
   "name": "@moretime/utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "闲暇/js工具箱",
   "repository": "https://github.com/wws1993/moretime-utils.git",
   "homepage": "https://wws1993.github.io/moretime-utils/",
@@ -39,6 +39,7 @@
     "@umijs/fabric": "^2.8.1",
     "@umijs/test": "^3.0.5",
     "dumi": "^1.1.0",
+    "dumi-theme-default": "0.0.0",
     "father": "^4.0.0-rc.2",
     "gh-pages": "^3.0.0",
     "lint-staged": "^10.0.7",
