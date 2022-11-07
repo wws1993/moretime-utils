@@ -45,5 +45,6 @@ export default defineConfig({
       }
     });
   },
+  esbuild: {},
   // more config: https://d.umijs.org/config
 });

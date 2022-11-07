@@ -10,11 +10,13 @@ group:
 
 基础使用时，会随机返回一个0-1之间的数字
 
-```ts
-import { getRandomString } from '@moretime/utils'
+<code src='../../examples/Radom/getRandomString.1.tsx'></code>
 
-const result = random.getRandomString() // 
-```
+## 使用模板
+
+函数可接收一字符串作为模板使用，模板中*将作为随机字符串进行替换
+
+<code src='../../examples/Radom/getRandomString.2.tsx'></code>
 
 ## 传参
 
