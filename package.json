@@ -14,7 +14,8 @@
     "build:docs": "dumi build",
     "deploy:docs": "gh-pages -d docs-dist",
     "deploy": "npm run build:docs && npm run deploy:docs",
-    "fabu": "npm publish --access public"
+    "fabu": "npm publish --access public",
+    "update:package": "cnpm i @moretime/utils --save"
   },
   "files": [
     "dist"
@@ -29,7 +30,7 @@
     "*.ts?(x)": []
   },
   "dependencies": {
-    "@moretime/utils": "^1.0.4",
+    "@moretime/utils": "^1.0.5",
     "react": "^18.0.0"
   },
   "devDependencies": {
