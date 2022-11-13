@@ -2,10 +2,10 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   title: '@moretime/utils',
-  favicon: '/favicon.ico',
-  logo: '/logo.png',
-  outputPath: 'docs-dist',
   publicPath: './',
+  favicon: './favicon.ico',
+  logo: './logo.png',
+  outputPath: 'docs-dist',
   history: { type: 'memory' },
   // mode: 'site',
   theme: {
