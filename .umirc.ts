@@ -4,8 +4,8 @@ export default defineConfig({
   title: '@moretime/utils',
   favicon: '/favicon.ico',
   logo: '/logo.png',
-  outputPath: 'docs-dist',
-  mode: 'site',
+  outputPath: 'docsource',
+  // mode: 'site',
   theme: {
     // 修改 dumi 默认主题的主色，更多变量详见：https://github.com/umijs/dumi/blob/1.x/packages/theme-default/src/style/variables.less
     '@c-primary': '#333',
@@ -45,6 +45,10 @@ export default defineConfig({
       }
     });
   },
+  navs: [
+    null,
+    { title: 'GitHub', path: 'https://github.com/wws1993/moretime-utils'},
+  ],
   esbuild: {},
   // mfsu: {}
   // more config: https://d.umijs.org/config
