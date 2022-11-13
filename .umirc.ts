@@ -4,7 +4,9 @@ export default defineConfig({
   title: '@moretime/utils',
   favicon: '/favicon.ico',
   logo: '/logo.png',
-  outputPath: 'docsource',
+  outputPath: 'docs-dist',
+  publicPath: './',
+  history: { type: 'memory' },
   // mode: 'site',
   theme: {
     // 修改 dumi 默认主题的主色，更多变量详见：https://github.com/umijs/dumi/blob/1.x/packages/theme-default/src/style/variables.less
