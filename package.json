@@ -1,6 +1,6 @@
 {
   "name": "@moretime/utils",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "闲暇/js工具箱",
   "repository": "https://github.com/wws1993/moretime-utils.git",
   "homepage": "https://wws1993.github.io/moretime-utils/",
@@ -30,7 +30,7 @@
     "*.ts?(x)": []
   },
   "dependencies": {
-    "@moretime/utils": "^1.0.5",
+    "antd": "^4.24.2",
     "react": "^18.0.0"
   },
   "devDependencies": {
