@@ -8,7 +8,7 @@ export default defineConfig({
   mode: 'site',
   theme: {
     // 修改 dumi 默认主题的主色，更多变量详见：https://github.com/umijs/dumi/blob/1.x/packages/theme-default/src/style/variables.less
-    // '@c-primary': '#1DA57A',
+    '@c-primary': '#333',
   },
   // 把浏览器设为 false 则不会包含他的补丁
   targets: {
@@ -46,5 +46,6 @@ export default defineConfig({
     });
   },
   esbuild: {},
+  // mfsu: {}
   // more config: https://d.umijs.org/config
 });

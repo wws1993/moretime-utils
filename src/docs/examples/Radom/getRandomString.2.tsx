@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {random} from '../../../index'
+import { random } from '@moretime/utils'
 
 export default () => {
   const [msg, setMsg] = useState('');
@@ -10,14 +10,18 @@ export default () => {
   useEffect(getRandomStr, [])
 
   return <div>
-    <p>
-      <label >template for string</label>
-      <input type="text" placeholder='please write template here...' value={tmp} onInput={e => setTmp(e.target.value)} />
-    </p>
+    <div>
+      <label>编辑字符串模板：</label>
+      <input defaultValue={tmp} onInput={e => setTmp(e.target.value)} />
+    </div>
 
-    <p>
-      <code><b style={{color: 'red'}}>result</b>: {msg}</code>
-    </p>
-    <button onClick={getRandomStr}>refresh</button>
+    <div>
+      随机字符串生成结果：
+      <code>{msg}</code>
+    </div>
+
+    <div>
+      <button onClick={getRandomStr}>refresh</button>
+    </div>
   </div>
 }

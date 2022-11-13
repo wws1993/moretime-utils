@@ -58,8 +58,8 @@ export default ({ params, title }: { params: string, title?: string }) => {
           </tr>
         </thead>
         <tbody>
-          {Apis.map(row => (
-            <tr key={row.keyword}>
+          {Apis.map((row, rowIdx) => (
+            <tr key={rowIdx}>
               <td>{row.keyword}</td>
               <td>{row.description || '--'}</td>
               <td>

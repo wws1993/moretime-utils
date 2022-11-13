@@ -3,14 +3,9 @@
  * @param fmt 日期字符串模板
  * @returns 时间字符串
  */
-export const format = (date: AllowDateType, fmt: string = 'yyyy/MM/dd hh:mm:ss') => {
+export const format = (date: AllowDateType = Date.now(), fmt: string = 'yyyy/MM/dd hh:mm:ss') => {
   date = new Date(date)
-
   if (String(date) === 'Invalid Date') return 'Invalid Date'
-
-  if (isNaN(date.getTime())) {
-    throw Error('请检查传入时间！')
-  }
 
   const o = {
     'M+': date.getMonth() + 1, // 月份
