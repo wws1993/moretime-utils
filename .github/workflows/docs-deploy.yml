@@ -1,7 +1,7 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
 
-name: docs-deploy
+name: deploy
 
 on:
   release:
@@ -10,43 +10,25 @@ on:
     branches:
       - main
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm install
-      - run: npm run build:docs
   deploy:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/checkout@v2
+
+      - name: Build
+        uses: actions/setup-node@master
         with:
-          # Upload entire repository
-          path: './docs-dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          node-version: '16.x'
+      - run: npm install # 安装依赖
+      - run: npm run build # 打包
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./docs-dist # 3.打包后文件的输出目录(根据你自己的项目情况而定)
+          github_token: ${{ secrets.DOCS_CI_CD }} # 4.刚才你C下来的仓库token秘钥!!!
+          user_name: ${{ secrets.MY_USER_NAME }} # 不用改
+          user_email: ${{ secrets.MY_USER_EMAIL }} # 不用改
+          commit_message: 自动部署 # 5.部署时的 git 提交信息，自由填写
