@@ -1,7 +1,3 @@
-# 闲暇（moretime）
+# 闲暇（@moretime/utils）
 
-```
-npm install @moretime/utils --save
-
-Enjoy it!
-```
+闲暇工具箱
