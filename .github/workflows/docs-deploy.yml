@@ -6,6 +6,9 @@ name: docs-deploy
 on:
   release:
     types: [created]
+  push:
+    branches:
+      - main
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
