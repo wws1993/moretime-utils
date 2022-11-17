@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,7 +34,9 @@ jobs:
           node-version: '16.x'
       - run: npm install # 安装依赖
       - run: npm run build # 打包
-
+  deploy:
+    needs: build
+    steps:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
