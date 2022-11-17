@@ -4,6 +4,7 @@ import * as random from './packages/Random';
 import * as cmd from './packages/Cmd';
 import * as file from './packages/File';
 import * as dom from './packages/Dom';
+import * as string from './packages/String';
 
 export {
   cmd,
@@ -11,5 +12,6 @@ export {
   date,
   file,
   array,
+  string,
   random,
 }
